@@ -24,3 +24,5 @@ net:
 ```
 
 6. Start the mongod process with the configuration file: `mongod.exe --config="C:/MongoDB/bin/mongod.cfg"`
+7. In another command prompt, run mongo.exe to test your connection to the database
+8. Run `show dbs` to verify
