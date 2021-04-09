@@ -27,5 +27,11 @@ net:
 7. In another command prompt, run mongo.exe to test your connection to the database
 8. Run `show dbs` to verify
 9. To convert standalone to Replica set, add the `replication` section.
-10. Connect to your cluster and run `rs.inititate()`
-11. You should habe a primary now
+
+```yaml
+replication:
+   replSetName: "myRS"
+```
+
+11. Connect to your cluster and run `rs.inititate()`
+12. You should habe a primary now
