@@ -140,3 +140,15 @@ var diffs = currentDoc - newDoc;
 
 foreach(diff in diffs)
   db.getSiblingDB("mydb").usersAudit.insertOne({ identifier: "john.doe", diff: diff, ts: new Date(), o : "u", trx });
+
+
+
+auditRecord = {
+	"_id" : ObjectId("60781a34d81982e6482535a4"),
+	"identifier" : "john.doe",
+	"fieldName" : "firstName",
+	"fieldValue" : "John",
+	"ts" : ISODate("2021-04-15T10:49:24.056Z"),
+	"o" : "i",
+	"trx" : ObjectId("60781a33d81982e6482535a3")
+}
