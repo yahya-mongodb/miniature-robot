@@ -117,3 +117,26 @@ trx = new ObjectId()
 
 foreach(diff in diffs)
   db.getSiblingDB("mydb").usersAudit.insertOne({ identifier: "john.doe", diff: diff, ts: new Date(), o : "u", trx });
+
+
+
+
+
+
+
+
+
+changeDoc = { $set: {
+  _id: "john.doe",
+  firstName: "Johny",
+  lastName: "Doe",
+  isMember: false
+}}
+
+var updatedDoc = db.getSiblingDB("mydb").users.findOneAndUpdate({_id: "john.doe"}, changeDoc);
+
+var diffs = currentDoc - newDoc;
+
+
+foreach(diff in diffs)
+  db.getSiblingDB("mydb").usersAudit.insertOne({ identifier: "john.doe", diff: diff, ts: new Date(), o : "u", trx });
