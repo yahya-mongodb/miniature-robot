@@ -152,3 +152,18 @@ auditRecord = {
 	"o" : "i",
 	"trx" : ObjectId("60781a33d81982e6482535a3")
 }
+
+
+auditRecodExample = {
+	"_id" : ObjectId("60781d39d81982e6482535ad"),
+	"identifier" : "john.doe",
+	"fieldName" : "firstName",
+	"fieldValue" : "Johny",
+	"ts" : ISODate("2021-04-15T11:02:17.843Z"),
+	"o" : "u",
+	"trx" : ObjectId("60781d39d81982e6482535ac"),
+	"oldFieldValue" : {
+		"f" : "firstName",
+		"fv" : "John"
+	}
+}
